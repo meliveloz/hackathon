@@ -9,3 +9,64 @@
 #movies .col-md-3 img {
   height: 280px;
 }
+
+/*Carousel*/
+.carousel-indicators{
+    z-index: -5;
+}
+
+.carousel-height{
+    height: 57vh;
+}
+.concert{
+    padding:2vh;
+}
+.btn-change{
+    background-color: black;
+}
+.btn-change:hover{
+    background-color: grey;
+}
+.carousel1{
+    background-image: url(../img/carousel1.jpeg);
+    background-size: cover;
+    background-position: center;
+
+}
+.carousel2{
+    background-image: url(../img/carousel2.jpeg);
+    background-size: cover;
+    background-position: center;
+
+
+}
+.carousel3{
+    background-image: url(../img/carousel3.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+.title-carousel{
+    padding-top: 2em;
+    padding-left: 2em;
+    margin: 0;
+    font-size: 5em;
+    color: #7e4958;
+    font-weight: bolder;
+
+}
+.paragraph-carousel{
+    color: #a58989;
+    font-size: 2em;
+    font-weight: bold;
+}
+.opacar{
+    background-color: rgba(0,0,0,0.5);
+    height: 100%;
+}
+.carousel-padding{
+  padding-bottom: 4em;
+}
+
+/*fin carousel*/
