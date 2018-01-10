@@ -10,6 +10,16 @@
   height: 280px;
 }
 
+/*modals*/
+#gridSystemModalLabel{
+  color: black;
+}
+
+.reg{
+  margin-bottom: 20px;
+}
+
+
 /*Carousel*/
 .carousel-indicators{
     z-index: -5;
