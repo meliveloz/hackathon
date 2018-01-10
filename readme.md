@@ -20,7 +20,19 @@
 
 
 ## Organización grupal
-####  Como primer paso creamos un tablero [trello](https://trello.com/b/wW4UpUpp/planificaci%C3%B3n-hackathon) y definimos un diagrama de flujo con las etapas que consideramos necesarias para organizarnos mejor.
+####  Como primer paso creamos un tablero [trello](https://trello.com/b/wW4UpUpp/planificaci%C3%B3n-hackathon) y definimos un diagrama de flujo con las etapas que consideramos necesarias para organizarnos mejor. Además nos dividimos en grupos para trabajar en paralelo.
 
+
+## Hasta donde llegamos
+#### - Página de inicio
+#### - Buscador de películas por títilo
+#### - Información específica de cada película
+#### - Modales de registro e inicio de seción
+
+
+## Que nos falta
+#### - login y signup con firebase
+#### - filtro infantil
+#### - filtro mejores clasificados
 
 
