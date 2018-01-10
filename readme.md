@@ -21,6 +21,7 @@
 
 ## Organización grupal
 ####  Como primer paso creamos un tablero [trello](https://trello.com/b/wW4UpUpp/planificaci%C3%B3n-hackathon) y definimos un diagrama de flujo con las etapas que consideramos necesarias para organizarnos mejor. Además nos dividimos en grupos para trabajar en paralelo.
+![alt text](https://github.com/meliveloz/hackathon/blob/master/assets/img/trello.jpg)
 
 
 ## Hasta donde llegamos
@@ -35,4 +36,4 @@
 #### - filtro infantil
 #### - filtro mejores clasificados
 
-
+#### [gh-pages](https://meliveloz.github.io/hackathon) Watch this
