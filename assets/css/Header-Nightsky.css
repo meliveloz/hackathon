@@ -7,7 +7,7 @@ body {
     background: url("../../assets/img/nightsky.jpg") no-repeat;
     background-size: cover;
     background-position: bottom;
-    padding-bottom: 141px;
+    padding-bottom: 200px;
 }
 
 .header-nightsky .navbar-nav>li>a {

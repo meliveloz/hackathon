@@ -1,4 +1,16 @@
+
 /* ------------------explorer.html----- */
+=======
+/* Paleta de colores para pagina
+--- #060E17 "GRIS OCURO"- BASE PAGINA ( FONDO )
+--- #5B9496  "" - COLOR BOTON BASE
+--- #9AC0BA  "" - CAMBIO DE COLOR CUANDO CURSO ESTA ARRIBA DEL BOTON
+--- #F6EDD3  "BLANCO INVIERNO" - COLOR DE TIPOGRAFIA
+Tipografia font-family: 'Muli', sans-serif;
+<link href="https://fonts.googleapis.com/css?family=Muli:400i" rel="stylesheet">
+
+*/
+
 #movies img, #movie img {
   width: 100%;
 }
@@ -11,15 +23,44 @@
   height: 280px;
 }
 
-/*----- modals ------------*/
-#gridSystemModalLabel {
-  color: black;
+/*modals*/
+#gridSystemModalLabel{
+  color: white;
+}
+
+#gridSystemModalLabel2{
+  color:white;
+}
+
+.modal-header{
+  background-color: #9AC0BA;
 }
 
 .reg{
   margin-bottom: 20px;
 }
 
+.user{
+  margin-top: 20px;
+}
+
+.input-group-addon{
+  background-color: #9AC0BA;
+  color: white;
+}
+
+.btn-reg, .btn-login{
+  background-color: #5B9496;
+  color: #F6EDD3;
+}
+
+
+.btn-reg:hover, .btn-login:hover{
+  background-color: #9AC0BA;
+  color: #F6EDD3;
+}
+
+/* end modals*/
 
 /*Carousel*/
 .carousel-indicators {
