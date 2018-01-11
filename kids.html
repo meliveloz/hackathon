@@ -7,9 +7,12 @@
     <title>Watch This</title>
     <link rel="stylesheet" type="text/css" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="https://bootswatch.com/3/cyborg/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="kartik-v-bootstrap-star-rating-19120d9/css/star-rating.min.css">
     <link rel="stylesheet" href="assets/css/main.css">    
     <link rel="stylesheet" type="text/css" href="assets/css/kids.css">
+
   </head>
   <body>
     <div class="navbar navbar-default nav-kids">
@@ -18,9 +21,9 @@
           <a href="index.html" class="navbar-brand">Watch This</a>
         </div>
         <div class="col-sm-8 col-md-8 pull-right">
-            <form class="navbar-form" id="searchForm" role="search">
+            <form class="navbar-form" id="searchFormKids" role="search">
               <div class="input-group">
-                <input type="text" class="form-control" id="searchText" placeholder="Título de tu película">
+                <input type="text" class="form-control" id="searchTextKids" placeholder="Título de tu película">
                 <div class="input-group-btn">
                     <button class="btn btn-default search-btn" type="submit"><i class="glyphicon glyphicon-search"></i></button>
                 </div>
@@ -38,41 +41,19 @@
         <a href="#"><img class="img-responsive side-menu-logo" src="assets/img/user.jpg"></a>
 
         <p>
-            <a href="#" data-id="1">First option</a>
+            <a href="#" data-id="1">Inicio</a>
             <i class="fa fa-camera-retro"></i>
         </p>
 
         <p>
-            <a href="#" data-id="2">Second option</a>
+            <a href="#" data-id="2">Watch List</a>
             <i class="fa fa-code"></i>
         </p>
-
-        <p>
-            <a href="#" data-id="3">Third option</a>
-            <i class="fa fa-comment"></i>
-        </p>
-
-        <p>
-            <a href="#" data-id="4">Fourth option</a>
-            <i class="fa fa-plane"></i>
-        </p>
-
     </div>
 
     <span class="side-menu-close"><i class="fa fa-close"></i></span>
 
 </aside>
-
-    <!-- Buscador en jumbotron
-    <div class="container">
-      <div class="jumbotron">
-        <h3 class="text-center">Buscador de películas</h3>
-        <form action="" id="searchForm">
-          <input type="text" class="form-control" id="searchText" placeholder="Título de tu película">
-        </form>
-      </div>
-    </div> -->
-    
     <!--Carousel-->
     <div class="container-fluid carousel-padding">
       <div class="row">
@@ -119,11 +100,13 @@
       </div>
     </div>
     <div class="container">
-      <div id="movies" class="row"></div>
+      <div id="movies-kid" class="row"></div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="kartik-v-bootstrap-star-rating-19120d9/js/star-rating.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="assets/js/app.js"></script>
+    <script type="text/javascript" src="assets/js/app-kids.js"></script>
 
   </body>
 </html>

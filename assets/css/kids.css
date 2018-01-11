@@ -1,5 +1,6 @@
 body{
-  background-color: #5B9496;
+  background-color:#03A6A6;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .nav-kids{
@@ -21,4 +22,17 @@ body{
 }
 .side-menu-basic{
   background-color: #5B9496;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.noKids{
+  color: white;
+  font-size: 2em;
+}
+
+.titleKids {
+    padding-left: 10%;
+}
+.list-group-item{
+  background-color: #012e40;
 }
