@@ -6,11 +6,11 @@ $(document).ready(() => {
   })
 });
 
-// $(function(){
-// setTimeout(function() {
-//    $('#splash').fadeOut(500);
-// }, 6000);
-// });
+$(function(){
+setTimeout(function() {
+   $('#splash').fadeOut(500);
+}, 2000);
+});
 
 function getMovies(searchText){
   console.log(searchText);

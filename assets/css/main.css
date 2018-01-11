@@ -1,5 +1,5 @@
 /*splash*/
-/*#splash {
+#splash {
   height: 100vh;
   position: absolute;
   z-index: 7;
@@ -7,28 +7,85 @@
   width: 100%;
 }
 .gif-splash {
-  width: 100%;
-}*/
+  width: 40%;
+  margin-left: 30%;
+}
 
+/*index*/
+#logo-index{
+  width: 27.5%;
+}
+
+.index-p{
+  padding-top: 2%;
+}
 
 /* ------------------explorer.html----- */
 body{
   font-family: 'Montserrat', sans-serif;
 }
 
+.navbar{
+  background-color: #111110;
+  /*border-bottom: none;*/
+}
+
 .user-menu{
-  margin-right: 15px;
-  background-color: #5B9496;
+  /*margin-right: 25px;*/
+  background-color: transparent;
+  border: none;
+  width: 10vh;
+  height: 7vh;
+  margin: 0;
+  padding: 0;
+}
+
+.fa-user-circle-o, .fa-facebook-official, .fa-twitter-square{
+  font-size: 2em;
+  margin-top: -18%;
   color: #F6EDD3;
+  /*margin-right: 15px;*/
+}
+
+.fa-user-circle-o:hover, .fa-facebook-official:hover, .fa-twitter-square:hover{
+  color: #5B9496;
+}
+
+li:hover{
+  color: #5B9496;
 }
 
 .user-menu:hover, #close:hover{
-  background-color: #9AC0BA;
+  /*background-color: #9AC0BA;*/
 }
 
 #close{
   background-color: #5B9496;
 }
+
+.side-menu-basic.side-menu-shown{
+  background-color: rgba(42, 42, 42, 0.8);
+}
+
+.navbar-brand{
+  margin: 0;
+  padding: 0;
+  width: 30%;
+}
+
+.navbar-header{
+  width: 15%;
+}
+
+.navbar-form{
+  padding-left: 20%;
+}
+
+.isotipe{
+  width: 100%;
+  margin: 0;
+}
+
 
 /* Paleta de colores para pagina
 --- #060E17 "GRIS OCURO"- BASE PAGINA ( FONDO )
@@ -61,12 +118,18 @@ Tipografia font-family: 'Muli', sans-serif;
   color:white;
 }
 
+.modal-content{
+  background-color: rgba(42, 42, 42, 0.8);
+  border-color: #fffbfb !important;
+}
+
 .modal-header{
-  background-color: #9AC0BA;
+  background-color: rgba(95, 119, 93, 0.2);
 }
 
 .reg{
   margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 .user{
@@ -74,18 +137,22 @@ Tipografia font-family: 'Muli', sans-serif;
 }
 
 .input-group-addon{
-  background-color: #9AC0BA;
+  background-color: #373D3D;
   color: white;
 }
 
+.form-control{
+  background-color: lightgrey;
+}
+
 .btn-reg, .btn-login{
-  background-color: #5B9496;
+  background-color: rgba(36, 42, 44, 0.9);
   color: #F6EDD3;
 }
 
 
 .btn-reg:hover, .btn-login:hover{
-  background-color: #9AC0BA;
+  background-color: #5B9496;
   color: #F6EDD3;
 }
 
@@ -97,7 +164,7 @@ Tipografia font-family: 'Muli', sans-serif;
 }
 
 .carousel-height {
-    height: 50vh;
+    height: 70vh;
 }
 .concert {
     padding:2vh;
@@ -149,16 +216,16 @@ Tipografia font-family: 'Muli', sans-serif;
     background-position: center top;
 }
 .title-carousel{
-    padding-top: 2em;
+    padding-top: 2.9em;
     padding-left: 2em;
     margin: 0;
     font-size: 5em;
-    color: #7e4958;
+    color: #F6EDD3;
     font-weight: bolder;
 
 }
 .paragraph-carousel {
-    color: #a58989;
+    color: #F6EDD3;
     font-size: 2em;
     font-weight: bold;
 }
@@ -168,6 +235,7 @@ Tipografia font-family: 'Muli', sans-serif;
 }
 .carousel-padding {
   padding-bottom: 4em;
+  margin-top: -18px;
 }
 
 /*fin carousel*/

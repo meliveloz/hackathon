@@ -4,10 +4,10 @@ body {
 
 .header-nightsky {
     color: white;
-    background: url("../../assets/img/nightsky.jpg") no-repeat;
+    background: url("../../assets/img/fondoindex.png") no-repeat;
     background-size: cover;
     background-position: bottom;
-    padding-bottom: 20px;
+    padding-bottom: 2%;
 }
 
 .header-nightsky .navbar-nav>li>a {
@@ -72,7 +72,7 @@ body {
 .header-nightsky .hero {
     text-align: center;
     /*margin-top: 80px;*/
-    margin-bottom: 100px;
+    /*margin-bottom: 50px;*/
 }
 
 .header-nightsky .hero h1 {
@@ -98,14 +98,15 @@ body {
     border-color: #fffbfb !important;
     outline:none;
     margin-right: 20px;
-    margin-top: 20px;
+    margin-top: 7px;
     font-size: 24px;
     padding: 18px 24px;
     transition:0.2s background-color;
 }
 
 .header-nightsky .btn-primary:hover {
-    background-color:rgba(255,255,255,0.1);
+  background-color: #5B9496;
+    /*background-color:rgba(255,255,255,0.1);*/
 }
 
 .header-nightsky .btn-primary:active {
