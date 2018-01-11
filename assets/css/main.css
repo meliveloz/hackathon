@@ -128,6 +128,26 @@ Tipografia font-family: 'Muli', sans-serif;
     background-position: center;
 
 }
+
+.carousel-kid1 {
+    background-image: url(../img/1280x720-wo0.jpg);
+    background-size: cover;
+    background-position: center top;
+
+}
+.carousel-kid2 {
+    background-image: url(../img/pony4.jpg);
+    background-size: cover;
+    background-position: center top;
+
+
+}
+.carousel-kid3 {
+    background-image: url(../img/frozen1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
 .title-carousel{
     padding-top: 2em;
     padding-left: 2em;

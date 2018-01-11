@@ -1,0 +1,24 @@
+body{
+  background-color: #5B9496;
+}
+
+.nav-kids{
+  background-color: #F2C63F;
+}
+
+.title-carousel2 ,.paragraph-carousel{
+  color: #F34737;
+}
+.paragraph-carousel{
+  padding-left: 4em;
+}
+.btn-user{
+  background-color: #F34737;
+  color: white;
+}
+.search-btn{
+  background-color: #F34737;
+}
+.side-menu-basic{
+  background-color: #5B9496;
+}
