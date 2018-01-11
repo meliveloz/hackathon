@@ -81,3 +81,224 @@
 }
 
 /*fin carousel*/
+
+/*Side bar user*/
+.side-menu-basic{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 255px;
+    box-sizing: border-box;
+    background-color:  #222427;
+    box-shadow: 2px 4px 5px 0 rgba(29, 30, 31, 0.4);
+    z-index: 10;
+
+
+    color: #ffffff;
+    font: bold 16px sans-serif;
+
+    -webkit-transition: 0.4s ease-in;
+    transition: 0.4s ease-in;
+
+    -webkit-transform: translateX(-300px);
+    transform:translateX(-300px);
+}
+
+.side-menu-basic.side-menu-shown{
+    -webkit-transform: translateX(0);
+    transform:translateX(0);
+}
+
+/* Scrollable container for the side menu options */
+
+.side-menu-basic .side-menu-content{
+    overflow: auto;
+    max-height: 100%;
+    padding: 40px 33px 0;
+    box-sizing: border-box;
+}
+
+/* The logo */
+
+.side-menu-basic .side-menu-logo{
+    display: block;
+    font: normal 50px 'Cookie', cursive;
+    color: inherit;
+    text-decoration: none;
+    line-height: 122px;
+    text-align: center;
+    width: 122px;
+    border-radius: 50%;
+    background-color: #151617;
+    margin: 0 auto 45px;
+}
+
+/* Side menu rows */
+
+.side-menu-basic p{
+    overflow: hidden;
+    margin: 0 0 30px;
+}
+
+.side-menu-basic p a{
+    text-decoration: none;
+    color: inherit;
+    max-width: 150px;
+    float: left;
+}
+
+.side-menu-basic p i{
+    float: right;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Close button */
+
+.side-menu-basic .side-menu-close{
+    position: absolute;
+    right: -55px;
+    top: 15px;
+    width: 35px;
+
+    display: none;
+    font-size: 18px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 50%;
+    background-color:  #ed145b;
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.side-menu-basic.side-menu-shown .side-menu-close{
+    display: block;
+}
+
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+header{
+    box-sizing: border-box;
+    text-align: center;
+    width: 100%;
+    padding: 25px 40px;
+    background-color: #3484B3;
+    overflow: hidden;
+}
+
+
+header h1{
+    float: left;
+    font: normal 24px/1.5 'Open Sans', sans-serif;
+    color: #fff;
+    margin: 0;
+}
+
+header a{
+    color:#fff;
+    float: right;
+    text-decoration: none;
+    display: inline-block;
+    padding: 13px 50px;
+    border-radius: 3px;
+    font: bold 14px/1 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    background-color:#F05283;
+
+}
+
+ul.navigation {
+    list-style: none;
+    border-bottom: 1px solid #EAEAEA;
+    background-color: #FFF;
+    padding: 20px;
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 75px;
+}
+
+ul.navigation a{
+    text-decoration: none;
+    color: #FFF;
+    text-align: left;
+    background-color: #BCB8C2;
+    padding: 10px 16px;
+    border-radius: 2px;
+    opacity: 0.8;
+    font-size: 16px;
+    display: inline-block;
+    margin: 4px;
+    line-height: 1;
+    outline: none;
+
+    transition: 0.2s ease;
+}
+
+ul.navigation li a.active{
+    background-color: #F05283;
+    pointer-events: none;
+}
+
+ul.navigation li a:hover {
+    opacity: 1;
+}
+
+
+ul.navigation li{
+    display: inline-block;
+}
+
+
+@media (max-width: 1000px) {
+
+
+    header h1{
+        float: none;
+    }
+
+    header a{
+        margin-top: 25px;
+        float: none;
+    }
+
+}
+
+.main-content{
+    margin-bottom: 75px;
+}
+
+/* Styling the buttons for showing the dialogs. You can ignore and remove these styles */
+
+
+.menu-toggle:hover{
+    opacity:0.96;
+}
+
+
+
+/* -- Demo ads -- */
+
+@media (max-width: 1200px) {
+    #bsaHolder{ display:none;}
+}
+
+/* -- Link to Tutorialzine -- */
+
+.tz-link{
+    text-decoration: none;
+    color: #fff !important;
+    font: bold 36px Arial,Helvetica,sans-serif !important;
+}
+
+.tz-link span{
+    color: #da431c;
+}
+
+/*Termino side bar user*/
+
+.btn-user{
+    position: relative;
+    left: 60em;
+    top: 0.5em;
+}
