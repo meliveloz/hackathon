@@ -1,9 +1,73 @@
 $(document).ready(() => {
+
+  // Search Bar
   $('#searchForm').on('keyup', function(e){
     var searchText = $('#searchText').val();
     getMovies(searchText);
     e.preventDefault();
   })
+
+  // making the side menu work
+  $('.menu-toggle').click(function(e){
+    var menu = $(this).data('show-dialog');
+    $('.' + menu).toggleClass('side-menu-shown');
+  });
+
+  $('.side-menu-close').on('click', function () {
+    $('.side-menu-basic').removeClass('side-menu-shown');
+  });
+
+  $('.side-menu-basic a').on('click', function (e) {
+    e.preventDefault();
+    alert('You chose option ' + $(this).data('id'));
+  });
+
+  // Insertar Comentarios
+  var containerPosts = $('#contPost'); //Contenedor de los comentarios en una var.
+  
+  $('#send').click(function() {
+    var message = $('#txtpost').val(); // Rescato el mensaje del input
+    if(message !== ""){
+    $('#txtpost').val(""); // vacío el input del mensaje
+    var url = $("#urlInput").val(); //url de la foto
+    $('#urlInput').val("");
+    // Generar la hora con moment
+    var dateNow = moment().format('MMMM Do YYYY, h:mm a');
+
+    // Le paso los mensajes rescatados y prepend para añadir el elemento antes que el otro
+    containerPosts.prepend( 
+      '<div class="wall-item border">' + 
+        '<div class="row">' +
+          '<div class="meta">' + 
+            '<img class="user-img" src="assets/img/img_user.jpg">' +
+            '<div class="user">' + 
+              '<a class="owner-link" href="#"> User_Cinefilo</a>' + 
+            '</div>' +
+            '<div class="like" style="float:right;">' + 
+              '<span><i class="glyphicon glyphicon-heart heart-like"></i></span>' +
+            '</div>' +
+            '<div class="post-meta">' +
+              '<span class="time-created">' + dateNow + '</span>' +
+              '<span class="time-created"></span>' +
+              '<span class="time-created">- <i class="fa fa-clock-o"></i></span>' +
+            '</div>' +
+          '</div>' +
+          '<div class="post-contents">' +
+            '<p>' + message + '</p>' +
+          '</div>' +
+        '</div>' +
+      '</div>'
+    );
+
+  // Hace que el corazón quede de color rojo al hacer click en él
+  $('.heart-like').click(function(){
+    $(this).toggleClass('paint-heart');
+    
+  });
+
+    }
+  });
+
 });
 
 $(function(){
@@ -12,15 +76,14 @@ setTimeout(function() {
 }, 2000);
 });
 
+
+// funcion que trae las peliculas
 function getMovies(searchText){
   console.log(searchText);
   $.getJSON('http://www.omdbapi.com/?apikey=189b9b4d&s=' + searchText)
   .then(function(response){
     console.log(response);
     var movies = response.Search;
-    // if (image !== "N/A"){
-    //   $('img').attr('src', image);
-    // }
     var output = "";
     $.each(movies, function(index, movie){
       if (movie.Poster == "N/A"){
@@ -51,6 +114,7 @@ function getMovies(searchText){
     console.log(err);
   })
 }
+
 
 function movieSelected(id){
   sessionStorage.setItem('movieId', id);
@@ -102,29 +166,3 @@ function getMovie(){
     console.log(err);
   })
 }
-
-
-
-/*Funcionalidad Side bar*/
-
-$(document).ready(function() {
-
-  $('.menu-toggle').click(function(e){
-
-    var menu = $(this).data('show-dialog');
-
-    $('.' + menu).toggleClass('side-menu-shown');
-
-  });
-
-  $('.side-menu-close').on('click', function () {
-    $('.side-menu-basic').removeClass('side-menu-shown');
-  });
-
-  $('.side-menu-basic a').on('click', function (e) {
-    e.preventDefault();
-    alert('You chose option ' + $(this).data('id'));
-  });
-
-});
-

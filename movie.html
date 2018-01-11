@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="assets/css/main.css">
   </head>
   <body>
+    <!-- Navbar -->
     <div class="navbar navbar-default">
       <div class="container">
         <div class="navbar-header">
@@ -32,6 +33,7 @@
               </div>
             </form>
         </div>
+        
       </div>
     </div>
 
@@ -68,14 +70,39 @@
 
 </aside>
 
+    <!-- Información de las peliculas -->
     <div class="container">
-      <div id="movie" class="well"></div>
+      <div id="movie"></div>
+      <!-- Comentarios -->
+      <div class="row">
+        <div class="well">
+          <h3>Comentarios</h3>
+          <!-- Incluir comentarios -->
+          <div class="row">
+            <div id="post">
+              <div class="col-md-10 col-md-offset-1">                               
+                <textarea id="txtpost" placeholder="Comenta acerca de esta película"></textarea>      
+                <div class="controls">                                     
+                  <div style="float:right;">
+                    <input id="send" class="btn btn-primary btn-post" type="submit" value="Comentar">
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1" id="contPost"></div>
+          </div>        
+        </div>
+      </div>
     </div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script type="text/javascript" src="kartik-v-bootstrap-star-rating-19120d9/js/star-rating.min.js"></script>
+    <script src="assets/js/moment.min.js"></script>
     <script src="assets/js/app.js"></script>
     <script src="assets/js/app-movie.js"></script>
   </body>
