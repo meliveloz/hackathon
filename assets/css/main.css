@@ -1,6 +1,35 @@
+/*splash*/
+/*#splash {
+  height: 100vh;
+  position: absolute;
+  z-index: 7;
+  background: black;
+  width: 100%;
+}
+.gif-splash {
+  width: 100%;
+}*/
+
 
 /* ------------------explorer.html----- */
-=======
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.user-menu{
+  margin-right: 15px;
+  background-color: #5B9496;
+  color: #F6EDD3;
+}
+
+.user-menu:hover, #close:hover{
+  background-color: #9AC0BA;
+}
+
+#close{
+  background-color: #5B9496;
+}
+
 /* Paleta de colores para pagina
 --- #060E17 "GRIS OCURO"- BASE PAGINA ( FONDO )
 --- #5B9496  "" - COLOR BOTON BASE

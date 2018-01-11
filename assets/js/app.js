@@ -6,6 +6,12 @@ $(document).ready(() => {
   })
 });
 
+// $(function(){
+// setTimeout(function() {
+//    $('#splash').fadeOut(500);
+// }, 6000);
+// });
+
 function getMovies(searchText){
   console.log(searchText);
   $.getJSON('http://www.omdbapi.com/?apikey=189b9b4d&s=' + searchText)
@@ -14,7 +20,7 @@ function getMovies(searchText){
     var movies = response.Search;
     // if (image !== "N/A"){
     //   $('img').attr('src', image);
-    // } 
+    // }
     var output = "";
     $.each(movies, function(index, movie){
       if (movie.Poster == "N/A"){
@@ -77,7 +83,7 @@ function getMovie(){
           </ul>
           <label for="input-7-sm" class="control-label"></label>
             <input id="input-7-sm" class="rating-loading" value="${movie.imdbRating}"><hr>
-        </div> 
+        </div>
       </div>
       <div class="row">
         <div class="well">
