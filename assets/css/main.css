@@ -1,4 +1,4 @@
-/* ------------------movie.html----- */
+/* ------------------explorer.html----- */
 #movies img, #movie img {
   width: 100%;
 }
@@ -11,9 +11,8 @@
   height: 280px;
 }
 
-
 /*----- modals ------------*/
-#gridSystemModalLabel{
+#gridSystemModalLabel {
   color: black;
 }
 
@@ -23,36 +22,36 @@
 
 
 /*Carousel*/
-.carousel-indicators{
+.carousel-indicators {
     z-index: -5;
 }
 
-.carousel-height{
-    height: 57vh;
+.carousel-height {
+    height: 50vh;
 }
-.concert{
+.concert {
     padding:2vh;
 }
-.btn-change{
+.btn-change {
     background-color: black;
 }
-.btn-change:hover{
+.btn-change:hover {
     background-color: grey;
 }
-.carousel1{
+.carousel1 {
     background-image: url(../img/carousel1.jpeg);
     background-size: cover;
     background-position: center;
 
 }
-.carousel2{
+.carousel2 {
     background-image: url(../img/carousel2.jpeg);
     background-size: cover;
     background-position: center;
 
 
 }
-.carousel3{
+.carousel3 {
     background-image: url(../img/carousel3.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -68,16 +67,16 @@
     font-weight: bolder;
 
 }
-.paragraph-carousel{
+.paragraph-carousel {
     color: #a58989;
     font-size: 2em;
     font-weight: bold;
 }
-.opacar{
+.opacar {
     background-color: rgba(0,0,0,0.5);
     height: 100%;
 }
-.carousel-padding{
+.carousel-padding {
   padding-bottom: 4em;
 }
 

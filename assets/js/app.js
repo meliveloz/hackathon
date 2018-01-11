@@ -17,15 +17,27 @@ function getMovies(searchText){
     // } 
     var output = "";
     $.each(movies, function(index, movie){
-      output += `
+      if (movie.Poster == "N/A"){
+        output += `
         <div class="col-md-3">
           <div class="well text-center">
-            <img src="${movie.Poster}">
+            <img src="http://sopemfyc.org/wp-content/uploads/2015/10/imagen-no-encontrada.jpg">
             <h5>${movie.Title}</h5>
             <a class="btn btn-primary" onclick="movieSelected('${movie.imdbID}')" href="movie.html">Movie Info</a>
           </div>
         </div>
       `;
+      }else{
+        output += `
+          <div class="col-md-3">
+            <div class="well text-center">
+              <img src="${movie.Poster}">
+              <h5>${movie.Title}</h5>
+              <a class="btn btn-primary" onclick="movieSelected('${movie.imdbID}')" href="movie.html">Movie Info</a>
+            </div>
+          </div>
+        `;
+      }
     });
     $('#movies').html(output);
   })
