@@ -75,6 +75,8 @@ function getMovie(){
             <li class="list-group-item"><strong>Director: </strong>${movie.Director}</li>
             <li class="list-group-item"><strong>Reparto: </strong>${movie.Actors}</li>
           </ul>
+          <label for="input-7-sm" class="control-label"></label>
+            <input id="input-7-sm" class="rating-loading" value="${movie.imdbRating}"><hr>
         </div> 
       </div>
       <div class="row">
@@ -88,6 +90,7 @@ function getMovie(){
       </div>
     `;
     $('#movie').html(output);
+     $("#input-7-sm").rating({min:0, max:10, step:0.5, size:'lg'});
   })
   .catch(function(err){
     console.log(err);
