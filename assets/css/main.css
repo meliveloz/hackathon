@@ -202,12 +202,14 @@ Tipografia font-family: 'Muli', sans-serif;
 .carousel1 {
     background-image: url(../img/minutes.png);
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
 
 }
 .carousel2 {
     background-image: url(../img/dead.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
 
 
@@ -267,6 +269,7 @@ Tipografia font-family: 'Muli', sans-serif;
 .opacar {
     background-image: url(../img/transpa.png);
     opacity: 0.9;
+    width: 100%;
     height: 100%;
     margin-right: 0%;
 }
