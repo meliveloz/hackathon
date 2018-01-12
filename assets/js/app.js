@@ -28,12 +28,19 @@
 function register(){
  var email = document.getElementById("email").value;
  var password= document.getElementById("password").value;
+<<<<<<< HEAD
 
 
   firebase.auth().createUserWithEmailAndPassword(email, password)
   .then(function(){
 
+=======
 
+  firebase.auth().createUserWithEmailAndPassword(email, password)
+  .then(function(){
+>>>>>>> watch list change
+
+    
   })
 
   .catch(function(error) {
@@ -301,6 +308,7 @@ function observador(){
     // User is signed in.
     window.location="explorer.html";
 
+
     var displayName = user.displayName;
     var email = user.email;
     var emailVerified = user.emailVerified;
@@ -320,3 +328,25 @@ function observador(){
 }
 
 observador();
+<<<<<<< HEAD
+=======
+
+/*función para log out*/
+function out(){
+  firebase.auth().signOut().then(function(){
+    console.log("saliendo..");
+    $(document).ready(function(){
+
+  window.location = "index.html";
+  window.reload();
+
+ //recargo la página nuevamente
+
+});
+})
+  .catch(function(error){
+ console.log(error);
+  });
+};
+
+>>>>>>> watch list change

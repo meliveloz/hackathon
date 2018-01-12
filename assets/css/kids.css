@@ -49,9 +49,14 @@ li:hover{
 .list-group-item{
   background-color: #012e40;
 }
+
 .isotipe{
   width: 320%;
   margin-top: 0%;
   margin-bottom:1%;
   
+}
+
+#bestMoviesKids img{
+  width: 100%;
 }

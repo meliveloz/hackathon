@@ -1,4 +1,8 @@
 $(document).ready(() => {
+  getBestMoviesKids1();
+  getBestMoviesKids2();
+  getBestMoviesKids3();
+  getBestMoviesKids4()
   $("#searchFormKids").on("submit", function(e){
     $("#bestMovies").empty();
     var searchTextKids = $("#searchTextKids").val();
@@ -11,6 +15,7 @@ function getKidsMovies(searchTextKids){
 $.get("http://www.omdbapi.com/?apikey=3a181f1c&t="+searchTextKids+"&plot=full")
 .then(function(response){
   console.log(response);
+  $("#bestMoviesKids").empty();
   $("#movies-kid").empty();
 if(response.Rated == "PG" || response.Rated =="G" || response.Rated == "Y" || response.Rated == "Y7" || response.Rated =="TV-G"){
   $("#movies-kid").append("<div class='row'><div class='col-md-4'>"+
@@ -58,8 +63,9 @@ if(response.Rated == "PG" || response.Rated =="G" || response.Rated == "Y" || re
   */
   }else{
 
-  $("#movies-kid").append("<p class='noKids'>Esta película NO se recomienda para público infantil</p>");
-  $(".carousel-padding").toggle("show");
+  $("#movies-kid").append("<div class='jumbotron'><h1>Lo sentimos !</h1><p> Esta película no es recomendada para menores</p>"+
+ "<p><a class='btn btn-primary btn-lg' href='#'' role='button'>Learn more</a></p></div>");
+  $(".carousel-padding").show();
  
 }
 
@@ -70,4 +76,75 @@ if(response.Rated == "PG" || response.Rated =="G" || response.Rated == "Y" || re
 //www.omdbapi.com/?t=titanic&plot=full
 };
 
+function getBestMoviesKids(){
+  $.get("http://www.omdbapi.com/?apikey=3a181f1c&t=coco&plot=full")
+  .then(function(response){
+    console.log(response);
+    $("#bestMovies").append("<div class='col-md-3'><div class='well text-center'>"+
+            "<img src='"+response.Poster+"'><h5>"+response.Title+"</h5><label for='input-8-sm' class='control-label'></label>"+
+            "<input id='input-8-sm' class='rating-loading' value="+response.imdbRating+"><hr>"+
+          "</div></div>");
+    $("#input-8-sm").rating({min:0, max:10, step:0.5, size:'lg'});
+  })
+  .catch(function(err){
+    console.log(err);
+  });
+};
+function getBestMoviesKids1(){
+  $.get("http://www.omdbapi.com/?apikey=3a181f1c&t=coco&plot=full")
+  .then(function(response){
+    console.log(response);
+    $("#bestMoviesKids").append("<div class='col-md-3'><div class='well text-center'>"+
+            "<img src='"+response.Poster+"'><h5>"+response.Title+"</h5><label for='input-8-sm' class='control-label'></label>"+
+            "<input id='input-8-sm' class='rating-loading' value="+response.imdbRating+"><hr>"+
+          "</div></div>");
+    $("#input-8-sm").rating({min:0, max:10, step:0.5, size:'lg'});
+  })
+  .catch(function(err){
+    console.log(err);
+  });
+};
 
+function getBestMoviesKids2(){
+  $.get("http://www.omdbapi.com/?apikey=3a181f1c&t=the+lion+king&plot=full")
+  .then(function(response){
+    console.log(response);
+    $("#bestMoviesKids").append("<div class='col-md-3'><div class='well text-center'>"+
+            "<img src='"+response.Poster+"'><h5>"+response.Title+"</h5><label for='input-9-sm' class='control-label'></label>"+
+            "<input id='input-9-sm' class='rating-loading' value="+response.imdbRating+"><hr>"+
+          "</div></div>");
+    $("#input-9-sm").rating({min:0, max:10, step:0.5, size:'lg'});
+  })
+  .catch(function(err){
+    console.log(err);
+  });
+};
+function getBestMoviesKids3(){
+  $.get("http://www.omdbapi.com/?apikey=3a181f1c&t=wall+e&plot=full")
+  .then(function(response){
+    console.log(response);
+    $("#bestMoviesKids").append("<div class='col-md-3'><div class='well text-center'>"+
+            "<img src='"+response.Poster+"'><h5>"+response.Title+"</h5><label for='input-11-sm' class='control-label'></label>"+
+            "<input id='input-11-sm' class='rating-loading' value="+response.imdbRating+"><hr>"+
+          "</div></div>");
+    $("#input-11-sm").rating({min:0, max:10, step:0.5, size:'lg'});
+  })
+  .catch(function(err){
+    console.log(err);
+  });
+};
+
+function getBestMoviesKids4(){
+  $.get("http://www.omdbapi.com/?apikey=3a181f1c&t=children+of+heaven&plot=full")
+  .then(function(response){
+    console.log(response);
+    $("#bestMoviesKids").append("<div class='col-md-3'><div class='well text-center'>"+
+            "<img src='"+response.Poster+"'><h5>"+response.Title+"</h5><label for='input-12-sm' class='control-label'></label>"+
+            "<input id='input-12-sm' class='rating-loading' value="+response.imdbRating+"><hr>"+
+          "</div></div>");
+    $("#input-12-sm").rating({min:0, max:10, step:0.5, size:'lg'});
+  })
+  .catch(function(err){
+    console.log(err);
+  });
+};
