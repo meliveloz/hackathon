@@ -1,24 +1,37 @@
 body{
-  background-color:#03A6A6;
+  background-color:#F6EDD3;
   font-family: 'Montserrat', sans-serif;
 }
-
-.nav-kids{
-  background-color: #F2C63F;
+.navbar{
+  background-color: #FAC960;
+  border:none;
+  padding: 0.5%;
 }
-
+fa-user-circle-o, .fa-facebook-official, .fa-twitter-square{
+  font-size: 2em;
+  margin-top: -18%;
+  color: #F6EDD3;
+  padding: -20
+}
+li:hover{
+  color: #E87C0B;
+}
+.fa-user-circle-o:hover, .fa-facebook-official:hover, .fa-twitter-square:hover{
+  color: #6CC4B3;
+}
 .title-carousel2 ,.paragraph-carousel{
   color: #F34737;
 }
 .paragraph-carousel{
   padding-left: 4em;
 }
-.btn-user{
-  background-color: #F34737;
-  color: white;
+
+.btn-default{
+  background-color: #6CC4B3;
 }
-.search-btn{
-  background-color: #F34737;
+.opacar {
+    background-image: url(../img/transpa.png);
+    height: 100%;
 }
 .side-menu-basic{
   background-color: #5B9496;
@@ -35,4 +48,10 @@ body{
 }
 .list-group-item{
   background-color: #012e40;
+}
+.isotipe{
+  width: 320%;
+  margin-top: 0%;
+  margin-bottom:1%;
+  
 }

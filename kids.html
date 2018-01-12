@@ -15,24 +15,63 @@
     <link rel="stylesheet" type="text/css" href="assets/css/kids.css">
   </head>
   <body>
-    <div class="navbar navbar-default nav-kids">
+    <!-- Navbar -->
+    <div class="navbar navbar-default">
       <div class="container">
         <div class="navbar-header">
-          <a href="index.html" class="navbar-brand">Watch This</a>
+          <a href="index.html" class="navbar-brand"><img class="isotipe" src="assets/img/indexlogo.png" alt=""></a>
         </div>
+        <ul class=" nav navbar-nav navbar-right">
+          <li><a href="#"><i class="fa fa-user-circle-o menu-toggle" data-show-dialog="side-menu-basic" aria-hidden="true"></i></a></li>
+          <li><a href="http://www.facebook.com"><i class="fa fa-facebook-official"></i></a></li>
+          <li><a href="http://www.twitter.com"><i class="fa fa-twitter-square"></i></a></li>
+        </ul>
         <div class="col-sm-8 col-md-8 pull-right">
-            <form class="navbar-form" id="searchFormKids" role="search">
-              <div class="input-group">
-                <input type="text" class="form-control" id="searchTextKids" placeholder="Título de tu película">
-                <div class="input-group-btn">
-                    <button class="btn btn-default search-btn" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-                </div>
+          <form class="navbar-form" id="searchFormKids" role="search">
+            <div class="input-group">
+              <input type="text" class="form-control" id="searchTextKids" placeholder="Título de tu película">
+              <div class="input-group-btn">
+                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
               </div>
+
             </form>
         </div>
 
       </div>
     </div>
+
+
+            </div>
+          </form>
+        </div>
+        <!-- <button class=" pull-right btn-user menu-toggle user-menu" data-show-dialog="side-menu-basic"><i class="fa fa-user-circle-o" aria-hidden="true"></i></button> -->
+      </div>
+    </div>
+    <!-- Side bar usuario-->
+    <aside class="side-menu-basic">
+      <div class="side-menu-content">
+        <a href="#"><img class="img-responsive side-menu-logo" src="assets/img/user.jpg"></a>
+        <p>
+            <a href="index.html" data-id="1">Inicio</a>
+            <i class="fa fa-camera-retro"></i>
+          <a href="#" data-id="1">First option</a>
+          <i class="fa fa-camera-retro"></i>
+        </p>
+        <p>
+          <a href="#" data-id="2">Second option</a>
+          <i class="fa fa-code"></i>
+        </p>
+        <p>
+          <a href="#" data-id="3">Third option</a>
+          <i class="fa fa-comment"></i>
+        </p>
+        <p>
+          <a href="#" data-id="4">Fourth option</a>
+          <i class="fa fa-plane"></i>
+        </p>
+      </div>
+      <span class="side-menu-close" id="close"><i class="fa fa-close"></i></span>
+    </aside>
 
     <!--Carousel-->
     <div class="container-fluid carousel-padding">

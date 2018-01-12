@@ -29,6 +29,7 @@ body{
 
 .navbar{
   background-color: #111110;
+  padding: 0.5%;
   /*border-bottom: none;*/
 }
 
@@ -80,12 +81,13 @@ li:hover{
 }
 
 .navbar-form{
-  padding-left: 20%;
+  padding-left: 0%;
 }
 
 .isotipe{
-  width: 100%;
-  margin: 0;
+  width: 320%;
+  margin-top: 0%;
+  
 }
 
 
@@ -237,7 +239,7 @@ Tipografia font-family: 'Muli', sans-serif;
     font-weight: bold;
 }
 .opacar {
-    background-color: rgba(0,0,0,0.5);
+    background-image: url(../img/transpa.png);
     height: 100%;
 }
 .carousel-padding {
