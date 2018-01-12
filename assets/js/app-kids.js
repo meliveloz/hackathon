@@ -34,7 +34,7 @@ if(response.Rated == "PG" || response.Rated =="G" || response.Rated == "Y" || re
       "<a href='http://imdb.com/title/"+response.imdbID+"' target='_blank' class='btn btn-primary'>Ver IMDB</a>"+
       "<a href='explorer.html' class='btn btn-default'>Volver</a></div></div>");
      $("#input-8-sm").rating({min:0, max:10, step:0.5, size:'lg'});
-     $(".carousel-padding").toggle();
+     $(".carousel-padding").hide();
 
   }
   else if(response.Rated =="PG-13"){
@@ -47,15 +47,16 @@ if(response.Rated == "PG" || response.Rated =="G" || response.Rated == "Y" || re
             "<li class='list-group-item'><strong>IMDB Rating: </strong>"+response.imdbRating+"</li>"+
             "<li class='list-group-item'><strong>Director: </strong>"+response.Director+"</li>"+
             "<li class='list-group-item'><strong>Reparto: </strong>"+response.Actors+"</li>"+
+            "<li class='list-group-item text-center alert-kid'><strong>Película no recomendada para menores de 13 años, pero no restringida.</strong></li>"+
           "</ul>"+
           "<label for='input-8-sm' class='control-label'></label>"+
             "<input id='input-8-sm' class='rating-loading' value="+response.imdbRating+"><hr></div>"+
       "</div><div class='row'><div class='well'><h3>Sinópsis</h3>"+response.Plot+"<hr>"+
       "<a href='http://imdb.com/title/"+response.imdbID+"' target='_blank' class='btn btn-primary'>Ver IMDB</a>"+
-      "<a href='explorer.html' class='btn btn-default'>Volver</a></div></div>");
+      "</div></div>");
      $("#input-8-sm").rating({min:0, max:10, step:0.5, size:'lg'});
      $(".carousel-padding").remove();
-    alert("No se recomienda para público menor a 13 años, pero no restringido");
+   
 
 /*
  }else if (response.Rated =="NOT RATED"){
@@ -63,9 +64,9 @@ if(response.Rated == "PG" || response.Rated =="G" || response.Rated == "Y" || re
   */
   }else{
 
-  $("#movies-kid").append("<div class='jumbotron'><h1>Lo sentimos !</h1><p> Esta película no es recomendada para menores</p>"+
- "<p><a class='btn btn-primary btn-lg' href='#'' role='button'>Learn more</a></p></div>");
-  $(".carousel-padding").show();
+  $("#movies-kid").append("<div class='jumbotron text-center'><h1 class='notKidBig'>Lo sentimos !</h1><p> Esta película no es recomendada para menores</p>"+
+ "</div>");
+  $(".carousel-padding").hide();
  
 }
 

@@ -47,7 +47,8 @@ li:hover{
     padding-left: 10%;
 }
 .list-group-item{
-  background-color: #012e40;
+  background-color: #D0E4EB;
+  border-color: white;
 }
 
 .isotipe{
@@ -59,4 +60,31 @@ li:hover{
 
 #bestMoviesKids img{
   width: 100%;
+}
+
+
+.well{
+  border: none;
+  background-color: #D0E4EB;
+}
+
+hr{
+  border-color: white;
+}
+
+h2,h3,h5{
+  color:#5B9496;
+}
+.alert-kid{
+  font-size: 1.3em;
+  color: #5B9496;
+}
+
+.jumbotron{
+  background-color: #D0E4EB;
+
+}
+
+.notKidBig{
+  color:#5B9496;
 }
