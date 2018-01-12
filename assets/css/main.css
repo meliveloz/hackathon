@@ -153,6 +153,10 @@ Tipografia font-family: 'Muli', sans-serif;
   padding-top: 20px;
 }
 
+.init-reg{
+  font-size: 3em;
+}
+
 .input-group-addon{
   background-color: #373D3D;
   color: white;
