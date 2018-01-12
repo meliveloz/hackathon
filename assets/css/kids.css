@@ -35,6 +35,9 @@ li:hover{
   color: red;
   margin-left: 60%;
 }
+h1 .notKidBig{
+  color: cadetblue;
+}
 
 .btn-default{
   background-color: #6CC4B3;

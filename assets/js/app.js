@@ -70,6 +70,7 @@ $(document).ready(() => {
   $('#searchForm').on('keyup submit', function(e){
     var searchText = $('#searchText').val();
     $('.result').removeClass('hide');
+    $("#bestMovies").empty();
     $('#result').text(searchText);
     getMovies(searchText);
     e.preventDefault();
@@ -88,7 +89,7 @@ $(document).ready(() => {
 
   $('.side-menu-basic a').on('click', function (e) {
     e.preventDefault();
-    window.location="index.html"
+   
   });
 
   // Insertar Comentarios
@@ -141,7 +142,7 @@ $(document).ready(() => {
   $(function(){
   setTimeout(function() {
      $('#splash').fadeOut(500);
-  }, 2000);
+  }, 6000);
   });
 
 
@@ -332,6 +333,7 @@ observador();
 
 
 /*función para log out*/
+
 function out(){
   firebase.auth().signOut().then(function(){
     console.log("saliendo..");
@@ -349,3 +351,15 @@ function out(){
   });
 };
 
+$("#link-watch").click(function(){
+  window.location="watchlist.html";
+
+})
+$("#link-search").click(function(){
+  window.location="explorer.html";
+
+})
+$("#link-logout").click(function(){
+  window.location="index.html";
+
+})
