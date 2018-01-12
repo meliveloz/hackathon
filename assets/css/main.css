@@ -670,3 +670,9 @@ ul.navigation li{
 .rating-lg {
   font-size: 2em!important;
 }
+
+/*Best movies*/
+#bestMovies img{
+  width: 100%;
+  height: 250px;
+}

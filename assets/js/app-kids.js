@@ -1,5 +1,6 @@
 $(document).ready(() => {
   $("#searchFormKids").on("submit", function(e){
+    $("#bestMovies").empty();
     var searchTextKids = $("#searchTextKids").val();
     getKidsMovies(searchTextKids);
     e.preventDefault();
@@ -68,3 +69,5 @@ if(response.Rated == "PG" || response.Rated =="G" || response.Rated == "Y" || re
 });
 //www.omdbapi.com/?t=titanic&plot=full
 };
+
+

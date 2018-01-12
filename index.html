@@ -9,6 +9,7 @@
       <link rel="stylesheet" href="assets/css/main.css">
       <link rel="stylesheet" type="text/css" href="assets/css/Header-Nightsky.css">
       <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+      <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
   </head>
   <body>
     <!-- SPLASH -->
@@ -27,6 +28,7 @@
         <div class="hero">
           <img id="logo-index" src="assets/img/logoindex.png" alt="logo">
             <p class="index-p">Regístrate y encuentra la película para tí.</p>
+            
             <!--modal de registro-->
             <button class="btn btn-primary" data-toggle="modal" data-target="#modal-reg">Regístrate</button>
             <div class="modal fade" id="modal-reg" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
@@ -51,20 +53,20 @@
                     </div>
                     <div class="row">
                       <div class="col-md-10 col-md-offset-1 input-group reg">
-                        <span class="input-group-addon" id="basic-addon3">Correo electrónico</span>
-                        <input type="text" class="form-control" placeholder="mail" aria-describedby="basic-addon1">
+                        <span class="input-group-addon" >Correo electrónico</span>
+                        <input type="text" class="form-control" id="email" placeholder="mail" aria-describedby="basic-addon1">
                       </div>
                     </div>
                     <div class="row">
                       <div class="col-md-10 col-md-offset-1 input-group reg">
-                        <span class="input-group-addon" id="basic-addon4">Contraseña</span>
-                        <input type="text" class="form-control" placeholder="password" aria-describedby="basic-addon1">
+                        <span class="input-group-addon" >Contraseña</span>
+                        <input type="password" id="password" class="form-control" placeholder="password" aria-describedby="basic-addon1">
                       </div>
                     </div>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-default btn-reg" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-default btn-reg">Regístrate</button>
+                    <button type="button" onclick="register()" class="btn btn-default btn-reg">Regístrate</button>
                   </div>
                 </div><!-- /.modal-content -->
               </div><!-- /.modal-dialog -->
@@ -80,24 +82,24 @@
                   </div>
                   <div class="row">
                     <div class="col-md-10 col-md-offset-1 input-group reg user">
-                      <span class="input-group-addon" id="basic-addon5">Usuario</span>
-                      <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1">
+                      <span class="input-group-addon">Email</span>
+                      <input type="text" id="email2" class="form-control" placeholder="" aria-describedby="basic-addon1">
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-10 col-md-offset-1 input-group reg">
-                      <span class="input-group-addon" id="basic-addon6">Contraseña</span>
-                      <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1">
+                      <span class="input-group-addon">Contraseña</span>
+                      <input type="text" id="password2" class="form-control" placeholder="" aria-describedby="basic-addon1">
                     </div>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-default btn-login" data-dismiss="modal">Entrar</button>
+                    <button type="button" onclick="ingreso()" class="btn btn-default btn-login" data-dismiss="modal">Entrar</button>
                   </div>
                 </div>
               </div>
             </div>
             <!--explorar -->
-            <a class="btn btn-primary" href="explorer.html">KIDS</a>
+            <a class="btn btn-primary" href="kids.html">KIDS</a>
         </div>
     </div>
 

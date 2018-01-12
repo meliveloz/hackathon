@@ -1,11 +1,78 @@
-$(document).ready(() => {
+// Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAHMRozxKKM1AYH-YUgYvo_7Mq0PXgJTS0",
+    authDomain: "watch-this-cb177.firebaseapp.com",
+    databaseURL: "https://watch-this-cb177.firebaseio.com",
+    projectId: "watch-this-cb177",
+    storageBucket: "",
+    messagingSenderId: "424234562434"
+  };
+  firebase.initializeApp(config);
 
+  firebase.auth().setPersistence(firebase.auth.Auth.Persistence.NONE) //esto es para que se borre el usuario activo cada vez que inicio sesion
+  .then(function() {
+
+    // Existing and future Auth states are now persisted in the current
+    // session only. Closing the window would clear any existing state even
+    // if a user forgets to sign out.
+    // ...
+    // New sign-in will be persisted with session persistence.
+    return firebase.auth().signInWithEmailAndPassword(email, password);
+  })
+  .catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+  });
+
+function register(){
+ var email = document.getElementById("email").value;
+ var password= document.getElementById("password").value;
+ 
+
+  firebase.auth().createUserWithEmailAndPassword(email, password)
+  .then(function(){
+    
+
+  })
+
+  .catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // ...
+  alert("la contraseña debe ser de 6 dígitos / mail incorrecto");
+  console.log(errorCode);
+  console.log(errorMessage);
+});
+};
+
+function ingreso(){
+  var email2 = document.getElementById("email2").value;
+  var password2= document.getElementById("password2").value;
+  firebase.auth().signInWithEmailAndPassword(email2, password2).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  alert("Error en mail o contraseña");
+
+});
+};
+
+
+
+$(document).ready(() => {
+  getBestMovies();
+  getBestMovies1();
+  getBestMovies2();
+  getBestMovies3();
   // Search Bar
   $('#searchForm').on('keyup', function(e){
     var searchText = $('#searchText').val();
     getMovies(searchText);
     e.preventDefault();
   })
+  
 
   // making the side menu work
   $('.menu-toggle').click(function(e){
@@ -19,7 +86,7 @@ $(document).ready(() => {
 
   $('.side-menu-basic a').on('click', function (e) {
     e.preventDefault();
-    alert('You chose option ' + $(this).data('id'));
+    window.location="index.html"
   });
 
   // Insertar Comentarios
@@ -166,3 +233,90 @@ function getMovie(){
     console.log(err);
   })
 }
+
+
+function getBestMovies(){
+  $.get("http://www.omdbapi.com/?apikey=3a181f1c&t=The+Godfather&plot=full")
+  .then(function(response){
+    console.log(response);
+    $("#bestMovies").append("<div class='col-md-3'><div class='well text-center'>"+
+            "<img src='"+response.Poster+"'><h5>"+response.Title+"</h5><label for='input-8-sm' class='control-label'></label>"+
+            "<input id='input-8-sm' class='rating-loading' value="+response.imdbRating+"><hr>"+
+          "</div></div>");
+    $("#input-8-sm").rating({min:0, max:10, step:0.5, size:'lg'});
+  })
+  .catch(function(err){
+    console.log(err);
+  });
+};
+
+function getBestMovies1(){
+  $.get("http://www.omdbapi.com/?apikey=3a181f1c&t=The+Dark+Knight&plot=full")
+  .then(function(response){
+    console.log(response);
+    $("#bestMovies").append("<div class='col-md-3'><div class='well text-center'>"+
+            "<img src='"+response.Poster+"'><h5>"+response.Title+"</h5><label for='input-9-sm' class='control-label'></label>"+
+            "<input id='input-9-sm' class='rating-loading' value="+response.imdbRating+"><hr>"+
+          "</div></div>");
+    $("#input-9-sm").rating({min:0, max:10, step:0.5, size:'lg'});
+  })
+  .catch(function(err){
+    console.log(err);
+  });
+};
+
+function getBestMovies2(){
+  $.get("http://www.omdbapi.com/?apikey=3a181f1c&t=12+Angry+men&plot=full")
+  .then(function(response){
+    console.log(response);
+    $("#bestMovies").append("<div class='col-md-3'><div class='well text-center'>"+
+            "<img src='"+response.Poster+"'><h5>"+response.Title+"</h5><label for='input-10-sm' class='control-label'></label>"+
+            "<input id='input-10-sm' class='rating-loading' value="+response.imdbRating+"><hr>"+
+          "</div></div>");
+    $("#input-10-sm").rating({min:0, max:10, step:0.5, size:'lg'});
+  })
+  .catch(function(err){
+    console.log(err);
+  });
+};
+
+function getBestMovies3(){
+  $.get("http://www.omdbapi.com/?apikey=3a181f1c&t=Pulp-fiction&plot=full")
+  .then(function(response){
+    console.log(response);
+    $("#bestMovies").append("<div class='col-md-3'><div class='well text-center'>"+
+            "<img src='"+response.Poster+"'><h5>"+response.Title+"</h5><label for='input-11-sm' class='control-label'></label>"+
+            "<input id='input-11-sm' class='rating-loading' value="+response.imdbRating+"><hr>"+
+          "</div></div>");
+    $("#input-11-sm").rating({min:0, max:10, step:0.5, size:'lg'});
+  })
+  .catch(function(err){
+    console.log(err);
+  });
+};
+function observador(){
+  firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    console.log("existe usuario activo");
+    // User is signed in.
+    window.location="explorer.html";
+
+    var displayName = user.displayName;
+    var email = user.email;
+    var emailVerified = user.emailVerified;
+    var photoURL = user.photoURL;
+    var isAnonymous = user.isAnonymous;
+    var uid = user.uid;
+    var providerData = user.providerData;
+    // ...
+  } else {
+    // User is signed out.
+    // ...
+    //
+    console.log("No existe usuario activo");
+  }
+});
+
+}
+
+observador();
