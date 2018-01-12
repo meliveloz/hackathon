@@ -1,6 +1,19 @@
 $(document).ready(() => {
+  // making the side menu work
+  $('.menu-toggle').click(function(e){
+    var menu = $(this).data('show-dialog');
+    $('.' + menu).toggleClass('side-menu-shown');
+  });
 
-// Elimina el comentario al hacer click en el icono de la basura
+  $('.side-menu-close').on('click', function () {
+    $('.side-menu-basic').removeClass('side-menu-shown');
+  });
+
+  $('.side-menu-basic a').on('click', function (e) {
+    e.preventDefault();
+  });
+
+  // Elimina el comentario al hacer click en el icono de la basura
   $('.delete-list1').click(function(){
     $('.delete1').empty();
     $('.delete1').append(`
