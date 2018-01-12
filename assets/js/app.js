@@ -28,17 +28,11 @@
 function register(){
  var email = document.getElementById("email").value;
  var password= document.getElementById("password").value;
-<<<<<<< HEAD
 
 
   firebase.auth().createUserWithEmailAndPassword(email, password)
   .then(function(){
 
-=======
-
-  firebase.auth().createUserWithEmailAndPassword(email, password)
-  .then(function(){
->>>>>>> watch list change
 
     
   })
@@ -328,8 +322,7 @@ function observador(){
 }
 
 observador();
-<<<<<<< HEAD
-=======
+
 
 /*función para log out*/
 function out(){
@@ -349,4 +342,3 @@ function out(){
   });
 };
 
->>>>>>> watch list change

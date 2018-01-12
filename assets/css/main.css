@@ -1,7 +1,7 @@
 /*splash*/
 #splash {
   height: 100vh;
-  position: absolute;
+  position: fixed;
   z-index: 7;
   background: black;
   width: 100%;
