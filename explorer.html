@@ -43,20 +43,20 @@
       <div class="side-menu-content">
         <a href="#"><img class="img-responsive side-menu-logo" src="assets/img/user.jpg"></a>
         <p>
-          <a href="#" data-id="1">Inicio</a>
-          <i class="fa fa-camera-retro"></i>
+          <a href="#" data-id="1">Mi perfil</a>
+          <i class="fa fa-user"></i>
         </p>
         <p>
-          <a href="#" data-id="1">Watch list</a>
-          <i class="fa fa-camera-retro"></i>
+          <a href="watchlist.html" data-id="2">Watch List</a>
+          <i class="fa fa-file-text-o"></i>
         </p>
         <p>
-          <a href="kids.html" data-id="2">Kids</a>
-          <i class="fa fa-code"></i>
+          <a href="explorer.html" data-id="3">Buscar Películas</a>
+          <i class="fa fa-video-camera"></i>
         </p>
         <p>
-          <a href="#" data-id="3">Log Out</a>
-          <i class="fa fa-comment"></i>
+          <a href="#" data-id="4">Cerrar Sesión</a>
+          <i class="fa fa-power-off"></i>
         </p>
 
       </div>
@@ -120,14 +120,16 @@
     </div>
     <div class="container">
       <div id="bestMovies" class="row">
-
-        
-      </div>
-      
+        <h3>Mejor calificadas</h3>        
+      </div>      
     </div>
     <!-- Peliculas filtradas -->
     <div class="container">
-      <div id="movies" class="row"></div>
+      <div class="row">
+        <h3 class="result hide">Tus resultados para: <span id="result"></span></h3> 
+      </div>
+      <div id="movies" class="row">
+      </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

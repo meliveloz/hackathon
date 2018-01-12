@@ -101,24 +101,24 @@ Tipografia font-family: 'Muli', sans-serif;
 
 */
 
-#movies img, #movie img {
+#movies img, #movie img, #w-list img {
   width: 100%;
 }
 
-#movies .col-md-3 .well {
+#movies .col-md-3 .well, #w-list .col-md-3 .well {
   height: 400px;
 }
 
-#movies .col-md-3 img {
+#movies .col-md-3 img, #w-list .col-md-3 img {
   height: 280px;
 }
 
 /*modals*/
-#gridSystemModalLabel{
+#gridSystemModalLabel {
   color: white;
 }
 
-#gridSystemModalLabel2{
+#gridSystemModalLabel2 {
   color:white;
 }
 
@@ -497,6 +497,7 @@ ul.navigation li{
   cursor: pointer;
 }
 
+/*color del corazon pintado*/
 .paint-heart {
   color: #01B0F1FF;
 }

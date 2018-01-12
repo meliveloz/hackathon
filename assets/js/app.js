@@ -60,19 +60,20 @@ function ingreso(){
 });
 };
 
-
-
 $(document).ready(() => {
   getBestMovies();
   getBestMovies1();
   getBestMovies2();
   getBestMovies3();
+
   // Search Bar
-  $('#searchForm').on('keyup', function(e){
+  $('#searchForm').on('keyup submit', function(e){
     var searchText = $('#searchText').val();
+    $('.result').removeClass('hide');
+    $('#result').text(searchText);
     getMovies(searchText);
     e.preventDefault();
-  })
+  });
 
 
   // making the side menu work
@@ -127,22 +128,21 @@ $(document).ready(() => {
       '</div>'
     );
 
-  // Hace que el corazón quede de color rojo al hacer click en él
-  $('.heart-like').click(function(){
-    $(this).toggleClass('paint-heart');
-
-  });
+    // Corazón cambia de color al hacer click en él
+    $('.heart-like').click(function(){
+      $(this).toggleClass('paint-heart');    
+    });
 
     }
   });
 
 });
 
-$(function(){
-setTimeout(function() {
-   $('#splash').fadeOut(500);
-}, 6000);
-});
+  $(function(){
+  setTimeout(function() {
+     $('#splash').fadeOut(500);
+  }, 2000);
+  });
 
 
 // funcion que trae las peliculas
@@ -184,12 +184,14 @@ function getMovies(searchText){
 }
 
 
+
 function movieSelected(id){
   sessionStorage.setItem('movieId', id);
   window.location = 'movie.html';
   return false;
 }
 
+// funcion para mostrar la info de una pelicula
 function getMovie(){
   var movieId = sessionStorage.getItem('movieId');
 
@@ -214,7 +216,8 @@ function getMovie(){
             <li class="list-group-item"><strong>Reparto: </strong>${movie.Actors}</li>
           </ul>
           <label for="input-7-sm" class="control-label"></label>
-            <input id="input-7-sm" class="rating-loading" value="${movie.imdbRating}"><hr>
+          <input id="input-7-sm" class="rating-loading" value="${movie.imdbRating}"><hr>
+          <button class="btn btn-success" id="addWatch">+ Watch List</button>
         </div>
       </div>
       <div class="row">
@@ -228,7 +231,11 @@ function getMovie(){
       </div>
     `;
     $('#movie').html(output);
-     $("#input-7-sm").rating({min:0, max:10, step:0.5, size:'lg'});
+    $("#input-7-sm").rating({min:0, max:10, step:0.5, size:'lg'});
+    
+    // $('#addWatch').click(function{
+    //   var movie1 = ${movie.imdbID};
+    // })
   })
   .catch(function(err){
     console.log(err);
