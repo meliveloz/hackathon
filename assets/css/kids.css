@@ -5,7 +5,7 @@ body{
 .navbar{
   background-color: #FAC960;
   border:none;
-  padding: 0.5%;
+  padding: 0.7%;
 }
 fa-user-circle-o, .fa-facebook-official, .fa-twitter-square{
   font-size: 2em;
@@ -19,11 +19,21 @@ li:hover{
 .fa-user-circle-o:hover, .fa-facebook-official:hover, .fa-twitter-square:hover{
   color: #6CC4B3;
 }
-.title-carousel2 ,.paragraph-carousel{
-  color: #F34737;
+.title-carousel2{
+    padding-top: 2.9em;
+    padding-left: 2em;
+    margin: 0;
+    font-size: 5em;
+    color: #F6EDD3;
+    font-weight: bolder;
+    margin-left: 53%;
 }
-.paragraph-carousel{
-  padding-left: 4em;
+.paragraph-carousel-kids{
+  font-size: 2em;
+  padding-left: 2em;
+  font-weight: bold;
+  color: red;
+  margin-left: 60%;
 }
 
 .btn-default{
@@ -31,7 +41,9 @@ li:hover{
 }
 .opacar {
     background-image: url(../img/transpa.png);
+    opacity: 0.9;
     height: 100%;
+    margin-right: 0%;
 }
 .side-menu-basic{
   background-color: #5B9496;

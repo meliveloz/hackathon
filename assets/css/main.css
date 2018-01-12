@@ -29,10 +29,17 @@ body{
 
 .navbar{
   background-color: #111110;
-  padding: 0.5%;
+  padding: 0.7%;
+  border:none;
   /*border-bottom: none;*/
 }
-
+.fa-arrow-left, .i{
+  font-size: 30px;
+  
+}
+.fa-arrow-left:hover, .i:hover{
+  color: #5B9496;
+}
 .user-menu{
   /*margin-right: 25px;*/
   background-color: transparent;
@@ -87,6 +94,7 @@ li:hover{
 .isotipe{
   width: 320%;
   margin-top: 0%;
+  padding-bottom: 2%;
   
 }
 
@@ -164,6 +172,9 @@ Tipografia font-family: 'Muli', sans-serif;
   background-color: #5B9496;
   color: #F6EDD3;
 }
+#btn-kids:hover{
+  background-color: #FAC960;
+}
 
 /* end modals*/
 
@@ -185,20 +196,20 @@ Tipografia font-family: 'Muli', sans-serif;
     background-color: grey;
 }
 .carousel1 {
-    background-image: url(../img/carousel1.jpeg);
+    background-image: url(../img/minutes.png);
     background-size: cover;
     background-position: center;
 
 }
 .carousel2 {
-    background-image: url(../img/carousel2.jpeg);
+    background-image: url(../img/dead.jpg);
     background-size: cover;
     background-position: center;
 
 
 }
 .carousel3 {
-    background-image: url(../img/carousel3.jpeg);
+    background-image: url(../img/Open-Windows.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -206,20 +217,20 @@ Tipografia font-family: 'Muli', sans-serif;
 }
 
 .carousel-kid1 {
-    background-image: url(../img/1280x720-wo0.jpg);
+    background-image: url(../img/coco.jpg);
     background-size: cover;
     background-position: center top;
 
 }
 .carousel-kid2 {
-    background-image: url(../img/pony4.jpg);
+    background-image: url(../img/elhijodepiegrande.jpg);
     background-size: cover;
     background-position: center top;
 
 
 }
 .carousel-kid3 {
-    background-image: url(../img/frozen1.jpg);
+    background-image: url(../img/small.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
@@ -227,20 +238,33 @@ Tipografia font-family: 'Muli', sans-serif;
 .title-carousel{
     padding-top: 2.9em;
     padding-left: 2em;
-    margin: 0;
+    margin-left: 54%;
     font-size: 5em;
     color: #F6EDD3;
     font-weight: bolder;
 
 }
 .paragraph-carousel {
+    color: red;
+    font-size: 4em;
+    font-weight: bold;
+    margin-left: 68%;
+}
+.paragraph-sub{
     color: #F6EDD3;
     font-size: 2em;
     font-weight: bold;
+    margin-left: 60%;
+    margin-bottom:6%;
+
+
+
 }
 .opacar {
     background-image: url(../img/transpa.png);
+    opacity: 0.9;
     height: 100%;
+    margin-right: 0%;
 }
 .carousel-padding {
   padding-bottom: 4em;
