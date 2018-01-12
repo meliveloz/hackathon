@@ -7,8 +7,10 @@
   width: 100%;
 }
 .gif-splash {
-  width: 40%;
-  margin-left: 30%;
+  width: 113%;
+  height: 100vh;
+  margin-left: -6.5%;
+  /*margin-left: 30%;*/
 }
 
 /*index*/
@@ -134,6 +136,11 @@ Tipografia font-family: 'Muli', sans-serif;
 
 .user{
   margin-top: 20px;
+}
+
+.init-login{
+  font-size: 3em;
+  padding-top: 20px;
 }
 
 .input-group-addon{

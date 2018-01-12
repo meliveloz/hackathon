@@ -28,11 +28,11 @@
 function register(){
  var email = document.getElementById("email").value;
  var password= document.getElementById("password").value;
- 
+
 
   firebase.auth().createUserWithEmailAndPassword(email, password)
   .then(function(){
-    
+
 
   })
 
@@ -72,7 +72,7 @@ $(document).ready(() => {
     getMovies(searchText);
     e.preventDefault();
   })
-  
+
 
   // making the side menu work
   $('.menu-toggle').click(function(e){
@@ -91,7 +91,7 @@ $(document).ready(() => {
 
   // Insertar Comentarios
   var containerPosts = $('#contPost'); //Contenedor de los comentarios en una var.
-  
+
   $('#send').click(function() {
     var message = $('#txtpost').val(); // Rescato el mensaje del input
     if(message !== ""){
@@ -102,15 +102,15 @@ $(document).ready(() => {
     var dateNow = moment().format('MMMM Do YYYY, h:mm a');
 
     // Le paso los mensajes rescatados y prepend para añadir el elemento antes que el otro
-    containerPosts.prepend( 
-      '<div class="wall-item border">' + 
+    containerPosts.prepend(
+      '<div class="wall-item border">' +
         '<div class="row">' +
-          '<div class="meta">' + 
+          '<div class="meta">' +
             '<img class="user-img" src="assets/img/img_user.jpg">' +
-            '<div class="user">' + 
-              '<a class="owner-link" href="#"> User_Cinefilo</a>' + 
+            '<div class="user">' +
+              '<a class="owner-link" href="#"> User_Cinefilo</a>' +
             '</div>' +
-            '<div class="like" style="float:right;">' + 
+            '<div class="like" style="float:right;">' +
               '<span><i class="glyphicon glyphicon-heart heart-like"></i></span>' +
             '</div>' +
             '<div class="post-meta">' +
@@ -129,7 +129,7 @@ $(document).ready(() => {
   // Hace que el corazón quede de color rojo al hacer click en él
   $('.heart-like').click(function(){
     $(this).toggleClass('paint-heart');
-    
+
   });
 
     }
@@ -140,7 +140,7 @@ $(document).ready(() => {
 $(function(){
 setTimeout(function() {
    $('#splash').fadeOut(500);
-}, 2000);
+}, 6000);
 });
 
 
