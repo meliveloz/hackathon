@@ -16,16 +16,20 @@
 /*index*/
 #logo-index{
   width: 27.5%;
+  position: relative;
+  bottom: 3em;
 }
 
 .index-p{
-  padding-top: 2%;
+ margin-bottom: 0;
+ padding-top: 0;
 }
 
 /* ------------------explorer.html----- */
 body{
   font-family: 'Montserrat', sans-serif;
 }
+
 
 .navbar{
   background-color: #111110;

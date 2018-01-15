@@ -9,21 +9,7 @@
   };
   firebase.initializeApp(config);
 
-  firebase.auth().setPersistence(firebase.auth.Auth.Persistence.NONE) //esto es para que se borre el usuario activo cada vez que inicio sesion
-  .then(function() {
 
-    // Existing and future Auth states are now persisted in the current
-    // session only. Closing the window would clear any existing state even
-    // if a user forgets to sign out.
-    // ...
-    // New sign-in will be persisted with session persistence.
-    return firebase.auth().signInWithEmailAndPassword(email, password);
-  })
-  .catch(function(error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-  });
 
 function register(){
  var email = document.getElementById("email").value;
@@ -32,6 +18,8 @@ function register(){
 
   firebase.auth().createUserWithEmailAndPassword(email, password)
   .then(function(){
+   
+    alert("ahora puede iniciar sesión");
 
 
     
@@ -55,11 +43,39 @@ function ingreso(){
   // Handle Errors here.
   var errorCode = error.code;
   var errorMessage = error.message;
-  alert("Error en mail o contraseña");
+  
 
 });
 };
 
+function observador(){
+  firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    console.log("existe usuario activo");
+    // User is signed in.
+    $("#login-btn").click(function(){
+    window.location="explorer.html";
+    });
+
+    var displayName = user.displayName;
+    var email = user.email;
+    var emailVerified = user.emailVerified;
+    var photoURL = user.photoURL;
+    var isAnonymous = user.isAnonymous;
+    var uid = user.uid;
+    var providerData = user.providerData;
+    // ...
+  } else {
+    // User is signed out.
+    // ...
+    //
+    console.log("No existe usuario activo");
+  }
+});
+
+}
+
+observador();
 $(document).ready(() => {
   getBestMovies();
   getBestMovies1();
@@ -91,6 +107,7 @@ $(document).ready(() => {
     e.preventDefault();
    
   });
+
 
   // Insertar Comentarios
   var containerPosts = $('#contPost'); //Contenedor de los comentarios en una var.
@@ -303,38 +320,12 @@ function getBestMovies3(){
     console.log(err);
   });
 };
-function observador(){
-  firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    console.log("existe usuario activo");
-    // User is signed in.
-    window.location="explorer.html";
 
-
-    var displayName = user.displayName;
-    var email = user.email;
-    var emailVerified = user.emailVerified;
-    var photoURL = user.photoURL;
-    var isAnonymous = user.isAnonymous;
-    var uid = user.uid;
-    var providerData = user.providerData;
-    // ...
-  } else {
-    // User is signed out.
-    // ...
-    //
-    console.log("No existe usuario activo");
-  }
-});
-
-}
-
-observador();
 
 
 /*función para log out*/
 
-function out(){
+/*function out(){
   firebase.auth().signOut().then(function(){
     console.log("saliendo..");
     $(document).ready(function(){
@@ -349,7 +340,7 @@ function out(){
   .catch(function(error){
  console.log(error);
   });
-};
+};*/
 
 $("#link-watch").click(function(){
   window.location="watchlist.html";

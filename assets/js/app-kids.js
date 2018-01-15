@@ -32,7 +32,7 @@ if(response.Rated == "PG" || response.Rated =="G" || response.Rated == "Y" || re
             "<input id='input-8-sm' class='rating-loading' value="+response.imdbRating+"><hr></div>"+
       "</div><div class='row'><div class='well'><h3>Sinópsis</h3>"+response.Plot+"<hr>"+
       "<a href='http://imdb.com/title/"+response.imdbID+"' target='_blank' class='btn btn-primary'>Ver IMDB</a>"+
-      "<a href='explorer.html' class='btn btn-default'>Volver</a></div></div>");
+      "<a href='kids.html' class='btn btn-default'>Volver</a></div></div>");
      $("#input-8-sm").rating({min:0, max:10, step:0.5, size:'lg'});
      $(".carousel-padding").hide();
 
