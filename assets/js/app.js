@@ -166,7 +166,7 @@ $(document).ready(() => {
 // funcion que trae las peliculas
 function getMovies(searchText){
   console.log(searchText);
-  $.getJSON('http://www.omdbapi.com/?apikey=189b9b4d&s=' + searchText)
+  $.getJSON('http://www.omdbapi.com/?apikey=c8b169d3&s=' + searchText)
   .then(function(response){
     console.log(response);
     var movies = response.Search;
@@ -213,7 +213,7 @@ function movieSelected(id){
 function getMovie(){
   var movieId = sessionStorage.getItem('movieId');
 
-  $.getJSON('http://www.omdbapi.com/?apikey=189b9b4d&i=' + movieId)
+  $.getJSON('http://www.omdbapi.com/?apikey=c8b169d3&i=' + movieId)
   .then(function(response){
     console.log(response);
     var movie = response;
