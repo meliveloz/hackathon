@@ -166,7 +166,7 @@ $(document).ready(() => {
 // funcion que trae las peliculas
 function getMovies(searchText){
   console.log(searchText);
-  $.getJSON('http://www.omdbapi.com/?apikey=189b9b4d&s=' + searchText)
+  $.getJSON('http://www.omdbapi.com/?apikey=c8b169d3&s=' + searchText)
   .then(function(response){
     console.log(response);
     var movies = response.Search;
@@ -213,7 +213,7 @@ function movieSelected(id){
 function getMovie(){
   var movieId = sessionStorage.getItem('movieId');
 
-  $.getJSON('http://www.omdbapi.com/?apikey=189b9b4d&i=' + movieId)
+  $.getJSON('http://www.omdbapi.com/?apikey=c8b169d3&i=' + movieId)
   .then(function(response){
     console.log(response);
     var movie = response;
@@ -262,7 +262,7 @@ function getMovie(){
 
 
 function getBestMovies(){
-  $.get("http://www.omdbapi.com/?apikey=3a181f1c&t=The+Godfather&plot=full")
+  $.get("http://www.omdbapi.com/?apikey=c8b169d3&t=The+Godfather&plot=full")
   .then(function(response){
     console.log(response);
     $("#bestMovies").append("<div class='col-md-3'><div class='well text-center'>"+
@@ -277,7 +277,7 @@ function getBestMovies(){
 };
 
 function getBestMovies1(){
-  $.get("http://www.omdbapi.com/?apikey=3a181f1c&t=The+Dark+Knight&plot=full")
+  $.get("http://www.omdbapi.com/?apikey=c8b169d3&t=The+Dark+Knight&plot=full")
   .then(function(response){
     console.log(response);
     $("#bestMovies").append("<div class='col-md-3'><div class='well text-center'>"+
@@ -292,7 +292,7 @@ function getBestMovies1(){
 };
 
 function getBestMovies2(){
-  $.get("http://www.omdbapi.com/?apikey=3a181f1c&t=12+Angry+men&plot=full")
+  $.get("http://www.omdbapi.com/?apikey=c8b169d3&t=12+Angry+men&plot=full")
   .then(function(response){
     console.log(response);
     $("#bestMovies").append("<div class='col-md-3'><div class='well text-center'>"+
@@ -307,7 +307,7 @@ function getBestMovies2(){
 };
 
 function getBestMovies3(){
-  $.get("http://www.omdbapi.com/?apikey=3a181f1c&t=Pulp-fiction&plot=full")
+  $.get("http://www.omdbapi.com/?apikey=c8b169d3&t=Pulp-fiction&plot=full")
   .then(function(response){
     console.log(response);
     $("#bestMovies").append("<div class='col-md-3'><div class='well text-center'>"+
