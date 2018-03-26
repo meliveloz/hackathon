@@ -166,7 +166,7 @@ $(document).ready(() => {
 // funcion que trae las peliculas
 function getMovies(searchText){
   console.log(searchText);
-  $.getJSON('http://www.omdbapi.com/?apikey=189b9b4d&s=' + searchText)
+  $.getJSON('http://www.omdbapi.com/?apikey=c8b169d3&s=' + searchText)
   .then(function(response){
     console.log(response);
     var movies = response.Search;
