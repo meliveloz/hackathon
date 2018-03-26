@@ -12,7 +12,7 @@ $(document).ready(() => {
 });
 
 function getKidsMovies(searchTextKids){
-$.get("http://www.omdbapi.com/?apikey=3a181f1c&t="+searchTextKids+"&plot=full")
+$.get("http://www.omdbapi.com/?apikey=c8b169d3&t="+searchTextKids+"&plot=full")
 .then(function(response){
   console.log(response);
   $("#bestMoviesKids").empty();
@@ -78,7 +78,7 @@ if(response.Rated == "PG" || response.Rated =="G" || response.Rated == "Y" || re
 };
 
 function getBestMoviesKids(){
-  $.get("http://www.omdbapi.com/?apikey=3a181f1c&t=coco&plot=full")
+  $.get("http://www.omdbapi.com/?apikey=c8b169d3&t=coco&plot=full")
   .then(function(response){
     console.log(response);
     $("#bestMovies").append("<div class='col-md-3'><div class='well text-center'>"+
@@ -92,7 +92,7 @@ function getBestMoviesKids(){
   });
 };
 function getBestMoviesKids1(){
-  $.get("http://www.omdbapi.com/?apikey=3a181f1c&t=coco&plot=full")
+  $.get("http://www.omdbapi.com/?apikey=c8b169d3&t=coco&plot=full")
   .then(function(response){
     console.log(response);
     $("#bestMoviesKids").append("<div class='col-md-3'><div class='well text-center'>"+
@@ -107,7 +107,7 @@ function getBestMoviesKids1(){
 };
 
 function getBestMoviesKids2(){
-  $.get("http://www.omdbapi.com/?apikey=3a181f1c&t=the+lion+king&plot=full")
+  $.get("http://www.omdbapi.com/?apikey=c8b169d3&t=the+lion+king&plot=full")
   .then(function(response){
     console.log(response);
     $("#bestMoviesKids").append("<div class='col-md-3'><div class='well text-center'>"+
@@ -121,7 +121,7 @@ function getBestMoviesKids2(){
   });
 };
 function getBestMoviesKids3(){
-  $.get("http://www.omdbapi.com/?apikey=3a181f1c&t=wall+e&plot=full")
+  $.get("http://www.omdbapi.com/?apikey=c8b169d3&t=wall+e&plot=full")
   .then(function(response){
     console.log(response);
     $("#bestMoviesKids").append("<div class='col-md-3'><div class='well text-center'>"+
@@ -136,7 +136,7 @@ function getBestMoviesKids3(){
 };
 
 function getBestMoviesKids4(){
-  $.get("http://www.omdbapi.com/?apikey=3a181f1c&t=children+of+heaven&plot=full")
+  $.get("http://www.omdbapi.com/?apikey=c8b169d3&t=children+of+heaven&plot=full")
   .then(function(response){
     console.log(response);
     $("#bestMoviesKids").append("<div class='col-md-3'><div class='well text-center'>"+
